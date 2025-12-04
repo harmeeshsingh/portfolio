@@ -56,13 +56,10 @@
 
         /* HERO SECTION */
         header {
-            background: linear-gradient(135deg, #1a1a40, #3b3b98, #6a5acd);
+            background: linear-gradient(135deg, #1a1a40, #3b3b98);
             color: white;
-            padding: 160px 20px 120px 20px;
-            text-align: center;
-            border-bottom-left-radius: 50% 8%;
-            border-bottom-right-radius: 50% 8%;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+            padding: 70px 0 60px 0;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.18);
         }
         header img.profile {
             width: 200px;
@@ -81,6 +78,70 @@
             font-size: 1.35rem;
             opacity: 0.95;
             margin-top: 10px;
+        }
+
+        /* HERO LAYOUT */
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .hero-text {
+            flex: 1;
+            text-align: left;
+        }
+        .hero-text h1 {
+            margin-bottom: 10px;
+        }
+        .hero-text p {
+            max-width: 520px;
+        }
+        .hero-profile {
+            flex: 0 0 260px;
+            text-align: center;
+        }
+        .hero-profile .profile {
+            margin-bottom: 16px;
+        }
+        .social-buttons {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .social-buttons a {
+            padding: 9px 16px;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #ffffff;
+        }
+        .btn-linkedin { background:#0077b5; }
+        .btn-github { background:#24292e; }
+        .btn-docker { background:#0db7ed; }
+        .btn-email { background:#ea4335; }
+
+        @media (max-width: 768px) {
+            .hero-inner {
+                flex-direction: column-reverse;
+                padding: 0 20px;
+                text-align: center;
+            }
+            .hero-text {
+                text-align: center;
+            }
+            .hero-text p {
+                margin: 0 auto;
+            }
         }
 
         /* SECTION STYLING */
@@ -140,27 +201,21 @@
 
 <!-- HERO -->
 <header id="hero">
-    <img class="profile" src="https://harmeesh-bucket.s3.ap-southeast-2.amazonaws.com/saminar+image.jpeg" />
-
-    <!-- Social Buttons Under Profile -->
-    <div style="margin-top:20px; display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-        <a href="https://www.linkedin.com/in/harmeesh-singh/" target="_blank" style="background:#0077b5;color:white;padding:10px 18px;border-radius:8px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:8px;">
-            <span>🔗</span> LinkedIn
-        </a>
-        <a href="https://github.com/harmeeshsingh" target="_blank" style="background:#24292e;color:white;padding:10px 18px;border-radius:8px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:8px;">
-            <span>💻</span> GitHub
-        </a>
-        <a href="https://hub.docker.com/repositories/harmeesh" target="_blank" style="background:#0db7ed;color:white;padding:10px 18px;border-radius:8px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:8px;">
-            <span>🐳</span> Docker Hub
-        </a>
-        <a href="mailto:harmeeshops@gmail.com" style="background:#ea4335;color:white;padding:10px 18px;border-radius:8px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:8px;">
-            <span>✉️</span> Email
-        </a>
+    <div class="hero-inner">
+        <div class="hero-text">
+            <h1>DevOps Consultant</h1>
+            <p>Building scalable, automated and reliable cloud ecosystems for modern enterprises.</p>
+        </div>
+        <div class="hero-profile">
+            <img class="profile" src="https://harmeesh-bucket.s3.ap-southeast-2.amazonaws.com/saminar+image.jpeg" alt="Harmeesh Singh" />
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/harmeesh-singh/" target="_blank" class="btn-linkedin"><span>🔗</span> LinkedIn</a>
+                <a href="https://github.com/harmeeshsingh" target="_blank" class="btn-github"><span>💻</span> GitHub</a>
+                <a href="https://hub.docker.com/repositories/harmeesh" target="_blank" class="btn-docker"><span>🐳</span> Docker Hub</a>
+                <a href="mailto:harmeeshops@gmail.com" class="btn-email"><span>✉️</span> Email</a>
+            </div>
+        </div>
     </div>
-
-    <h1>
-    <h1>DevOps Consultant</h1>
-    <p>Building Scalable, Automated & Reliable Cloud Ecosystems for Modern Enterprises</p>
 </header>
 
 <!-- TRENDING TECHNOLOGIES -->
